@@ -5,6 +5,12 @@ describe 'puppet::main::settings' do
   describe 'running puppet code' do
     it 'should work with no errors' do
       pp = <<-EOS
+        include stdlib
+        include stdlib::stages
+        include profile::package_management
+
+        class { 'cegekarepos' : stage => 'setup_repo' }
+        
         include profile::iac::java_jdk
         include profile::iac::java::alternatives
 
