@@ -11,6 +11,10 @@ describe 'puppet::main::settings' do
 
         class { 'cegekarepos' : stage => 'setup_repo' }
         
+        file { '/data':
+          ensure => 'directory',
+        }
+
         Yum::Repo <| title == 'cegeka-custom-noarch' |>
 
         include profile::iac::java_jdk
