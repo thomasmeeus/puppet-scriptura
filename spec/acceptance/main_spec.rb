@@ -17,6 +17,7 @@ describe 'puppet::main::settings' do
         }
 
         Yum::Repo <| title == 'cegeka-custom' |>
+        Yum::Repo <| title == 'cegeka-custom-noarch' |>
 
         include profile::iac::java_jdk
         include profile::iac::java::alternatives
