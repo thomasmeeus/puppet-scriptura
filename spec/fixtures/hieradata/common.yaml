@@ -3,15 +3,15 @@ profile::iac::java_jdk::pkg_name: 'jdk1.8.0_40'
 profile::iac::java::alternatives::jdk_version: '1.8.0_40'
 
 scriptura::iac::data_dir:
-  '/data/scriptura':
+  '/opt/scriptura':
     ensure: 'directory'
     owner:  'scriptura'
     group:  'scriptura'
-  '/data/scriptura/plugins':
+  '/opt/scriptura/plugins':
     ensure: 'directory'
     owner:  'scriptura'
     group:  'scriptura'
-  '/data/scriptura/plugins/scriptura-8.0':
+  '/opt/scriptura/plugins/scriptura-8.0':
     ensure: 'directory'
     owner:  'scriptura'
     group:  'scriptura'
